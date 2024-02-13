@@ -8,10 +8,11 @@ function stringToInteger(str) {
   // Iterate over each character in the input string
   for (let i = 0; i < str.length; i++) {
 
-    // Convert the current character to its corresponding digit value
+    // Inside the loop, we convert each character to its corresponding digit value by subtracting the character code of '0' from the character code of the current character (str.charCodeAt(i)). 
+    // This works because the character codes of digits '0' to '9' are consecutive and start from 48.
     const digit = str.charCodeAt(i) - 48;
 
-    // Multiply the existing result by 10 and add the current digit value
+    // We then update the result variable by multiplying it by 10 (to shift digits to the left) and adding the current digit value.
     result = result * 10 + digit;
   }
 

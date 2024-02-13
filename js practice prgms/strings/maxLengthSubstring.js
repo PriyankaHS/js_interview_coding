@@ -22,7 +22,8 @@ function maxLength() {
 console.log("The maximum length of a non-repeating substring is : ",maxLength());
 
 
-// Approach 2
+// Approach 2 - this returns string
+
 // function maxLengthUniqueSubstring(str) {
 
 //     // Initialize variables
