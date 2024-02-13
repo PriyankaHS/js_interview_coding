@@ -41,30 +41,3 @@ console.log(groupedAnagrams);
 // The code effectively groups anagrams together using a Map and the sorting technique.
 // The flat() method is used to flatten the nested arrays into a single array, producing the desired output format.
 // Clear comments enhance code readability and understanding.
-
-
-
-// practiced one
-// function isAnagram(words) {
-
-//     const anagramsMap = new Map();
-
-//     for (const word of words) {
-
-//         const sortedWord = word.split('').sort().join('');
-
-//         if(!anagramsMap.has(sortedWord)) {
-//             anagramsMap.set(sortedWord, []);
-//         }
-//         anagramsMap.get(sortedWord).push(word);
-//     }
-
-//     const flattenedAnagrams = Array.from(anagramsMap.values()).flat();
-
-//     return flattenedAnagrams;
-// }
-
-// const input1 = ["cat", "dog", "tac", "god", "act"];
-// const groupedAnagrams = isAnagram(input1);
-
-// console.log(groupedAnagrams);

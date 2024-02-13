@@ -14,4 +14,3 @@ if (isPalindrome(palindromeString)) {
   } else {
     console.log(`${palindromeString} is not a palindrome`);
   }
-  

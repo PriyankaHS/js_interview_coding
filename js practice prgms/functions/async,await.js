@@ -1,57 +1,42 @@
-// async function example
+// Example of async, await using Promise
 
-// Function that returns a Promise to add two numbers asynchronously
-async function addAsync(a, b) {
-    return new Promise((resolve, reject) => {
-      // Simulating an asynchronous operation
+function step1() {
+  return new Promise((resolve) => {
       setTimeout(() => {
-        if (typeof a !== 'number' || typeof b !== 'number') {
-          // Reject the Promise if any of the inputs is not a number
-          reject(new Error('Both inputs must be numbers'));
-        } else {
-          // Resolve the Promise with the sum if both inputs are numbers
-          const sum = a + b;
-          resolve(sum);
-        }
-      }, 1000); // Simulating a 1-second delay
-    });
+          console.log("Step 1 completed");
+          resolve();
+      }, 1000);
+  });
 }
-  
-  // Using the async function to add two numbers
-async function performAddition() {
-    try {
-        const result = await addAsync(5, 7);
-        console.log('Result of addition is :', result);
-    } catch (error) {
-        console.error('Error during addition:', error.message);
-    }
-}
-  
-  // Calling the function to perform addition
-performAddition();
 
-
-// Using Async/Await -> example
-async function asyncFunction() {
-    try {
-      console.log("Start");
-      const promise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve("Resolved");
-        }, 2000);
-      });
-      
-const result = await promise;
-console.log(result);
-console.log("End");
-    } catch (error) {
-        console.error(error);
-    }
+function step2() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          console.log("Step 2 completed");
+          resolve();
+      }, 1000);
+  });
 }
-  
-asyncFunction()
-  
-  // output:
-  // Start
-  // Resolved
-  // End
+
+function step3() {
+  return new Promise((resolve) => {
+      setTimeout(() => {
+          console.log("Step 3 completed");
+          resolve();
+      }, 1000);
+  });
+}
+
+async function performSteps() {
+  try {
+      await step1();
+      await step2();
+      await step3();
+      console.log("All steps completed");
+  } catch (error) {
+      console.error("An error occurred:", error);
+  }
+}
+
+// Call the async function
+performSteps();

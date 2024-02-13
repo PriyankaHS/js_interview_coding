@@ -1,4 +1,4 @@
-// find the missing number in the given array
+// 1 find the missing number in the given array
 
 function findMissingNum() {
     const arr = [1,2,3,4,5,7];
@@ -16,6 +16,8 @@ function findMissingNum() {
 
 findMissingNum()
 
+
+// 2
 function findMissingNumber(arr) {
     const n = arr.length + 1; // Including the missing number
     let actualSum = 0;
@@ -32,3 +34,16 @@ function findMissingNumber(arr) {
 
 const arr = [1, 2, 3, 4, 5, 7];
 findMissingNumber(arr);
+
+
+// 3
+function findMissingNumber1(array) {
+    
+    for (let i = 1; i <= array.length + 1; i++) {
+        if (!array.includes(i)) {
+            return i;
+        }
+    }
+}
+
+console.log(findMissingNumber1(arr));
