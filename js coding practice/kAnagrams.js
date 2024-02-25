@@ -23,19 +23,39 @@ function areAnagrams(str1, str2, k) {
         return false;
     }
 
-    const sortedStr1 = str1.split('').sort();
-    const sortedStr2 = str2.split('').sort();
+    for (let i = 0; i < str1.length; i++) {
 
-    let diff = 0;
-    
-    for (let i = 0; i < sortedStr1.length; i++) {
-        
-        if (sortedStr1[i] !== sortedStr2[i]) {
-            diff++;
+        let charFound = false;
+
+        for (let j = 0; j < str2.length; j++) {
+            
+            if (str1[i] === str2[j]) {
+
+            [str2[i], str2[j]] = [str2[j], str2[i]];
+            charFound = true;
+            break;
+          }
+        }
+        if (!charFound) {
+          return false;
         }
     }
-    return diff <= k;
+    return true;
 }
+
+//     const sortedStr1 = str1.split('').sort();
+//     const sortedStr2 = str2.split('').sort();
+
+//     let diff = 0;
+    
+//     for (let i = 0; i < sortedStr1.length; i++) {
+        
+//         if (sortedStr1[i] !== sortedStr2[i]) {
+//             diff++;
+//         }
+//     }
+//     return diff <= k;
+// }
 
 const str1 = "anagram";
 const str2 = "grammar";
