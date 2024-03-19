@@ -35,3 +35,26 @@ randomNumberPromise
 
 // Uses the then method to handle the fulfilled state of the Promise, logging the resolved value.
 // Uses the catch method to handle the rejected state of the Promise, logging the error
+
+// const rnP = new Promise((resolve, reject) => {
+    
+//     setTimeout(() => {
+
+//         const randomValue = Math.random();
+
+//         if(randomValue > 0.5) {
+//             resolve(randomValue);
+//         } else { 
+//             reject(new Error("Value is too small"))
+//         }
+//     }, 2000)
+// });
+
+// rnP
+// .then(result => {
+//     console.log("Promise passed", result);
+// })
+
+// .catch(error => {
+//     console.error("Promise is rejected", error);
+// })

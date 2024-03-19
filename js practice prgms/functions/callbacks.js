@@ -31,3 +31,18 @@ add(17, 30, logResult);
 // Calling add with callback: Invokes the add function with two numbers (5 and 3) and the logResult callback. The callback will be executed after the addition is complete.
 
 // In this example, the callback (logResult) is a separate function that gets executed after the addition operation inside the add function is completed. Callbacks are commonly used in asynchronous JavaScript, such as handling asynchronous operations like fetching data from a server or responding to user interactions.
+
+// practice
+
+function add(a, b, callback) {
+
+    const res = a + b;
+
+    callback(res);
+}
+
+function logResult(res) {
+    console.log("The result is ", res);
+}
+
+add(15, 21, logResult);
