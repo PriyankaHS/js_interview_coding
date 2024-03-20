@@ -1,0 +1,8 @@
+1. Remove special characters from the string
+2. Occurances of count in a string - aabbccccabcddbbc
+3. Sum of the elements 
+4. Find the unique elements in a given string
+5. Frequency program
+6. Unique Triplets program
+7. Convert given array to string to hash map
+8. In a given string of mixed A and B strings, I have to print seperate "A" or "B" string
